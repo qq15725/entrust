@@ -28,6 +28,14 @@ class MigrationCommand extends Command
     protected $description = 'Creates a migration following the Entrust specifications.';
 
     /**
+     * 兼容 laravel 5.5
+     */
+    public function handle()
+    {
+        $this->fire();
+    }
+
+    /**
      * Execute the console command.
      *
      * @return void
